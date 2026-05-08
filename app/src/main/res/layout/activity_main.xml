@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView keeps the educational output readable on small screens. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- Vertical LinearLayout stacks the status, greeting, and factorial result. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Security status shown in green or red by MainActivity. -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Etat securite : verification..."
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Native greeting output, disabled when a suspicious state is detected. -->
+        <TextView
+            android:id="@+id/tvHello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Fonction native en attente"
+            android:textSize="18sp" />
+
+        <!-- Native factorial output, blocked when a suspicious state is detected. -->
+        <TextView
+            android:id="@+id/tvFact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcul natif en attente"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>
